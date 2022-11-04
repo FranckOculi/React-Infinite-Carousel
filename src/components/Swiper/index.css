@@ -1,0 +1,50 @@
+.swiper-container {
+	/* width: 100%;
+     */
+	width: 450px;
+	overflow: hidden;
+}
+
+.swiper-list {
+	display: flex;
+	padding: 0;
+	transition: transform 0.3s ease-out;
+}
+
+.swiper-list.swiping {
+	transition: none;
+}
+
+.list {
+	list-style: none;
+	width: 100%;
+}
+
+.image {
+	width: 450px;
+}
+
+.image:focus {
+	outline: 0;
+	outline-style: none;
+	-moz-outline-style: none;
+}
+
+.indicator-container {
+	display: flex;
+	justify-content: center;
+	padding: 0;
+}
+
+.swiper-indicator {
+	list-style: none;
+	background-color: rgb(201, 201, 201);
+	width: 15px;
+	height: 15px;
+	border-radius: 50%;
+	margin: 3px;
+}
+
+.swiper-indicator.active {
+	background-color: black;
+}

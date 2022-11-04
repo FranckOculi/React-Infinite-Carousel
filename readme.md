@@ -1,8 +1,8 @@
-# React Infinite Carousel
+# React Infinite Carousel & Swiper
 
 ---
 
-![img](src/assets/carousel.jpg)
+![img](src/assets/screenshot.jpg)
 
   
 

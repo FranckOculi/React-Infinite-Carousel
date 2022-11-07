@@ -4,6 +4,8 @@ export const GET_FILMS = gql`
 	query GetFilms {
 		films {
 			id
+			genre
+			title
 			thumbnail
 		}
 	}

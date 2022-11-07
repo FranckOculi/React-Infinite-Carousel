@@ -5,11 +5,16 @@ import { GET_FILMS } from '../../gql/api/filmsQueries'
 import Carousel from '../Carousel'
 import Swiper from '../Swiper'
 import { Film } from '../../types/film'
+import Table from '../Table'
 
 const Films = () => {
 	const { loading, error, data } = useQuery(GET_FILMS)
 
-	const currentData: Film[] = data?.films
+	const currentData = data?.films.map((film: Film) => {
+		return {
+			thumbnail: film.thumbnail,
+		}
+	})
 
 	if (loading) return <p>Loading...</p>
 
@@ -19,6 +24,7 @@ const Films = () => {
 		<div>
 			<Carousel data={currentData} />
 			<Swiper data={currentData} />
+			<Table data={data?.films} />
 		</div>
 	)
 }

@@ -3,5 +3,4 @@ export interface Film {
 	genre: string
 	title: string
 	thumbnail: string
-	date: number
 }

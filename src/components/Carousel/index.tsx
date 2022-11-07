@@ -63,6 +63,7 @@ const Carousel = ({ data }: CarouselProps) => {
 		const slides = useMemo(() => {
 			return [
 				<RenderItem
+					key='prev-1'
 					data={
 						data[
 							current === 0
@@ -75,15 +76,19 @@ const Carousel = ({ data }: CarouselProps) => {
 					id='prev-1'
 				/>,
 				<RenderItem
+					key='prev'
 					data={data[current === 0 ? length - 1 : current - 1]}
 					id='prev'
 				/>,
-				<RenderItem key={'current'} data={data[current]} id={'active'} />,
+
+				<RenderItem key='active' data={data[current]} id={'active'} />,
 				<RenderItem
+					key='next'
 					data={data[current === length - 1 ? 0 : current + 1]}
 					id='next'
 				/>,
 				<RenderItem
+					key='next1'
 					data={
 						data[
 							current === length - 1
